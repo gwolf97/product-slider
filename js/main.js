@@ -13,4 +13,15 @@ buttonRight.addEventListener("click", function(){
 })
 
 const maxScrollLeft = slider.scrollWidth - slider.clientWidth
-alert(maxScrollLeft)
+
+//Autoplay Slider
+function autoplay(){
+    if (slider.scrollLeft > (maxScrollLeft - 1)){
+        slider.scrollLeft -= maxScrollLeft
+    }
+    else{
+        slider.scrollLeft += 1
+    }
+}
+
+let play = setInterval(autoplay, 50)
