@@ -165,7 +165,7 @@ section .thumbnail:hover {
 
 .product-details {
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   background-color: #fff;
 }
 
@@ -179,6 +179,26 @@ section .thumbnail:hover {
   padding-bottom: 1rem;
   color: green;
   font-weight: 700;
+}
+
+.product-details p span {
+  font-weight: normal;
+  text-decoration: line-through;
+  color: red;
+}
+
+.product-details a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: var(--color-sec);
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.product-details a:hover {
+  background-color: var(--color-primary);
 }
 
 /* ==========================================================================
