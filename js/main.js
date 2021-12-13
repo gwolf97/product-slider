@@ -1,5 +1,5 @@
 //variables
-let thumbnails = document.querySelector(".thumbnail");
+let thumbnails = document.querySelector("section");
 let slider = document.querySelector("#slider")
 let buttonRight = document.querySelector("#slide-right")
 let buttonLeft = document.querySelector("#slide-left")
@@ -25,3 +25,12 @@ function autoplay(){
 }
 
 let play = setInterval(autoplay, 50)
+
+//pause the slider on hover
+thumbnails.addEventListener("mouseover", function(){
+    clearInterval(play)
+})
+
+thumbnails.addEventListener("mouseout", function(){
+    return play = setInterval(autoplay, 50)
+})
