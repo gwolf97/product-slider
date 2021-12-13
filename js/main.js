@@ -17,6 +17,7 @@ const maxScrollLeft = slider.scrollWidth - slider.clientWidth
 //Autoplay Slider
 function autoplay(){
     if (slider.scrollLeft > (maxScrollLeft - 1)){
+        sleep(1000)
         slider.scrollLeft -= maxScrollLeft
     }
     else{
@@ -34,3 +35,14 @@ thumbnails.addEventListener("mouseover", function(){
 thumbnails.addEventListener("mouseout", function(){
     return play = setInterval(autoplay, 50)
 })
+
+//pause function
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
+  }
